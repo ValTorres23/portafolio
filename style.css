@@ -1,0 +1,147 @@
+:root {
+    --melon: #FFB097;
+    --blanco: #ffffff;
+    --texto: #333333;
+    --fondo-suave: #fff5f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--blanco);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Navegación */
+header {
+    background-color: var(--blanco);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--melon);
+}
+
+/* Hero Section */
+#hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--fondo-suave);
+    padding: 0 20px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#hero span {
+    color: var(--melon);
+}
+
+.btn-principal {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: var(--melon);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s;
+}
+
+.btn-principal:hover {
+    transform: scale(1.05);
+}
+
+/* Contenedores */
+.contenedor {
+    padding: 80px 10% 40px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    width: 50%;
+    height: 3px;
+    background: var(--melon);
+    position: absolute;
+    bottom: -10px;
+    left: 25%;
+}
+
+/* Proyectos Responsive */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.proyecto-card {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.proyecto-card:hover {
+    box-shadow: 0 10px 20px rgba(255, 176, 151, 0.2);
+    border-color: var(--melon);
+}
+
+footer {
+    padding: 40px;
+    background: var(--texto);
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 768px) {
+    #hero h1 { font-size: 2rem; }
+    nav ul { display: none; } /* Podrías agregar un menú hamburguesa luego */
+}
